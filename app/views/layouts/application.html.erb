@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>LuxuryWotches</title>
+    <%= display_meta_tags title: @page_title, description: @page_description, keywords: @page_keywords %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
   <body>
+
+  <!--top-header-->
+  <%= render 'include/main/top_header' %>
+  <!--top-header-->
+
+  <!--start-logo-->
+  <div class="logo">
+    <%= link_to root_path do %>
+      <h1>Luxury Watches</h1>
+    <% end %>
+  </div>
+  <!--start-logo-->
+
+  <!--bottom-header-->
+  <%= render 'include/main/bottom_header' %>
+  <!--bottom-header-->
+
+  <!--footer-->
+  <%= render 'include/main/footer' %>
+  <!--footer-->
+
+  <div class="content">
     <%= yield %>
+  </div>
+
+  <script src="<%= asset_path 'application' %>"></script>
   </body>
 </html>
