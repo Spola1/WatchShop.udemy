@@ -5,7 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-
+    <%= stylesheet_link_tag 'bootstrap',  media: 'all' %>
+    <%= stylesheet_link_tag 'flexslider', media: 'all' %>
+    <%= stylesheet_link_tag 'memenu',     media: 'all' %>
+    <%= stylesheet_link_tag 'style',      media: 'all' %>
+    <%= stylesheet_link_tag 'mystyle',    media: 'all' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -28,13 +32,13 @@
   <%= render 'include/main/bottom_header' %>
   <!--bottom-header-->
 
-  <!--footer-->
-  <%= render 'include/main/footer' %>
-  <!--footer-->
-
   <div class="content">
     <%= yield %>
   </div>
+
+  <!--footer-->
+  <%= render 'include/main/footer' %>
+  <!--footer-->
 
   <script src="<%= asset_path 'application' %>"></script>
   </body>
