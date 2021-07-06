@@ -53,6 +53,7 @@
 
             <% end %>
 
+
           </div>
           <div class="col-md-7 single-top-right">
             <div class="single-para simpleCart_shelfItem">
@@ -107,6 +108,15 @@
                 <input type="number" size="4" value="1" name="quantity" min="1" step="1">
 
               </div>
+
+              <%=
+                link_to 'ADD TO CART',
+                        cart_items_path,
+                        remote: true,
+                        data:      { method: :post , id: @product.id },
+                        class:    "add-cart item_add add-to-cart-link",
+                        id:       "productAdd"
+              %>
 
             </div>
           </div>
@@ -334,3 +344,4 @@
   </div>
 </div>
 <!--end-single-->
+<input type="hidden" value="<%= !current_user.nil? ? 88 : 99 %>" id="cart_access" />
