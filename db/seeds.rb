@@ -2,6 +2,9 @@
 
 require 'faker'
 
+users = User.create!([
+  {email: 'admin@admin.by', password: '123456', admin: true}
+  ])
 
 # table brands
 
